@@ -8,7 +8,7 @@ When a request is sent from the app, the data is pushed to Firebase. Firebase th
 
 ## 🔧 Technologies Used
 
-- 💻 Visual Studio
+- 💻 Visual Studio Code
 - 🧠 JavaScript
 - ☁️ Firebase Realtime Database
 - 🎨 HTML, CSS, Bootstrap
