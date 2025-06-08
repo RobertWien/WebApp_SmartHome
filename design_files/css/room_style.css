@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: block;
+    background-size: cover;
+}
+.title-project{
+    width: 100%;
+    height: 50px;
+    margin-top: 0px;
+    left: 50%;
+    text-align: center;
+
+}
+
+.txt-btn {
+    color: rgb(252, 0, 42);
+    font-size: 25px;
+    padding-left: 20px;
+    margin-left: 30dp;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+.name-project{
+    margin: auto;
+    height:100%;
+    width: fit-content;
+    text-align: center;
+    color: brown;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.dashboard{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 0;
+    margin: 5px ;
+    height: 100%;
+}
+.dashboard .device-item{
+    width: 320px;
+    height: 90%;
+    margin: 5px;
+}
+.dashboard .device-item .name-device{
+    font-size: 23px;
+    float: left;
+    width: auto;
+    height: 10%;
+    border-bottom: 5px solid #B0002F;
+    border-bottom-style: double;
+}
+.dashboard .device-item .pic{
+    width: 100%;
+    height: 80%;
+    align-content: center;
+}
+.dashboard .device-item .btn{
+    background-image: linear-gradient(to right,#eb1313,#ebc20c,#e2e7c5);
+    background-size: 200%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    /*border: none;*/
+    border-width:12px ;
+    /*outline: none;*/
+    outline-color: #eb1313;
+    width: 45%;
+    height: 25px;
+    border-radius: 12px;
+    transition: 0.2s;
+    color: rgb(28, 92, 209);
+    font-size: 25px;
+
+    text-orientation: unset;
+    font-weight: bold;
+}
+
+.dashboard .device-item .btn:hover{
+    background-position: right;
+}
+.viewgroup-sensor{
+    display: grid;
+    grid-template-columns: 25% 35% 50%;
+}
+.viewgroup-sensor .item-sensor{
+    /*display: grid;
+    grid-template-columns: 100px 100px 100px;
+    /*grid-template-columns: max-content auto;*/
+    color: rgb(243, 62, 92);
+    block-size: auto;
+    padding-left: 60px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.viewgroup-sensor .item-sensor .value-sensor{
+    font-size: 25px;
+    font-family:Consolas;
+    margin-left: 15px;
+    color:rgb(118, 110, 236);
+    font-weight: bold;
+}
+.viewgroup-sensor .item-sensor .name-sensor{
+    font-size: 25px;
+    font-family:Consolas;
+    /*border-bottom: 4px solid green;*/
+       
+}
+
+@media screen and (max-width: 900px){
+    .dashboard{
+        grid-template-columns: 1fr;
+    }
+    .device-item{
+        justify-content: center;
+    }
+}
+
+.viewgroup-kitchen-sensor{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.viewgroup-kitchen-sensor .item-sensor{
+    /*display: grid;
+    grid-template-columns: 100px 100px 100px;
+    /*grid-template-columns: max-content auto;*/
+    color: rgb(243, 62, 92);
+    block-size: auto;
+    padding-left: 60px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.viewgroup-kitchen-sensor .item-sensor .value-sensor{
+    font-size: 50px;
+    font-family:Consolas;
+    margin-left: 15px;
+    color:rgb(118, 110, 236);
+    font-weight: bold;
+}
+.viewgroup-kitchen-sensor .item-sensor .name-sensor{
+    font-size: 25px;
+    font-family:Consolas;
+    /*border-bottom: 4px solid green;*/
+       
+}
+

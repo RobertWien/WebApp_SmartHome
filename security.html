@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Security</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='design_files/css/room_style.css'>
+      
+            <!-- MATERIAL DESIGN ICONIC FONT -->
+        <link rel="stylesheet" href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+                
+                <!-- STYLE CSS -->
+        
+        <link rel="stylesheet" href="design_files/css/mainpage_style.css">
+     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src= "https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script> 
+    <script src= "https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script> 
+    <script src= "https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script> 
+    <script src= "https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+
+</head>
+
+<body  class = "h-100">
+    <nav class = "navbar navbar-expand-lg bg-dark text-white">
+        <div class = "container-fluid">
+            <ul class = " nav navbar-nav">
+                <div class="img-parent" style="margin-top: 5px;margin-right: 10px;">
+                    <img width="60" height="60" src="design_files/images/img_icon.png">
+                </div>
+                <li class ="active">
+                    <a class = "navbar-brand" style = "font-family:cursive;font-size:40px;font-weight: bold;color: rgb(243, 85, 85); text-decoration-style:wavy;",href="g">
+                         Smart Home
+                    </a>
+                </li>
+
+
+                <li class ="active">
+                    <span class = "nav-link" style = "color: whitesmoke; text-decoration-style:wavy;",href="g">
+                        <a href="MainPage.html" style="font-weight: bold;color: burlywood;text-decoration: none;">
+                            🏠Home
+                        </a>  
+                    </span>
+                </li>
+
+                <li class ="active">
+                    <span class = "nav-link" style = "color: whitesmoke; text-decoration-style:wavy;",href="g">
+                        <a href="notification.html" style="font-weight: bold;color: blanchedalmond;color: blanchedalmond;text-decoration: none;">
+                            🔔Notifications
+                        </a>  
+                    </span>
+                </li>
+
+                <li class ="active">
+                    <span class = "nav-link" style = "color: whitesmoke; text-decoration-style:wavy;",href="g">
+                        <a href="security.html" style="font-weight: bold;color: blanchedalmond;color: burlywood;text-decoration: none;">
+                            🛡️Security
+                        </a>  
+                    </span>
+                </li>
+
+                <li class ="active">
+                    <span class = "nav-link" style = "color: whitesmoke; text-decoration-style:wavy;",href="g">
+                        <a href="living_room.html" style="font-weight: bold;color: blanchedalmond;color: blanchedalmond;text-decoration: none;">
+                            🛋️Livingroom
+                        </a>  
+                    </span>
+                </li>
+
+                <li class ="active">
+                    <span class = "nav-link" style = "color: whitesmoke; text-decoration-style:wavy;",href="g">
+                        <a href="bed_room.html" style="font-weight: bold;color: blanchedalmond;color: burlywood;text-decoration: none;">
+                            🛏️Bedroom
+                        </a>  
+                    </span>
+                </li>
+
+                <li class ="active">
+                    <span class = "nav-link" style = "color: whitesmoke; text-decoration-style:wavy;",href="g">
+                        <a href="kitchen.html" style="font-weight: bold;color: blanchedalmond;color: blanchedalmond;text-decoration: none;">
+                            🍽️Kitchen
+                        </a>  
+                    </span>
+                </li>
+            </ul>
+
+
+            <div class="dropdown navbar-right">
+                <button
+                id="option-id" 
+                class="btn btn-light dropdown-toggle bg-dark text-white"
+                type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="font-weight: bold"> 
+                    📝Options
+                </button>  
+                <div
+                class="dropdown-menu"
+                aria-labelledby="option-id"
+                style = "height: 80px; min-width: fit-content; background-color: rgb(230, 219, 202);"
+                >
+                <a class="dropdown-item" id="btn-setting" href="settings.html" style="font-weight: bold;color: rgb(19, 15, 15); ">
+                    ⚙️ Settings
+                </a>
+
+                <a class="dropdown-item" id="btn-logout" href="#" style="font-weight: bold;color: rgb(19, 15, 15); ">
+                    🔒 Logout
+                </a>
+                </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </nav>
+    <div class="row h-100 bg-light">
+        <div class="col-lg-0 bg-secondary">
+            <ul class="nav flex-column">
+
+            </ul>
+        </div>
+        <div class="col-lg-12">
+            <div class="container" id="container">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- name of site-->
+    <div class="title-project">
+        <h1 class="name-project" style="color: rgb(9, 24, 241); ">SECURITY</h1>
+    </div>
+
+    <!--CONTROL DASHBOARD-->
+    <div class="dashboard">
+
+        <div class="device-item">
+            <div class="name-device" style="margin-bottom: 50px;color:crimson;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">WARNING</div>
+            <img class="pic" style="width: 300px; height: 330px;" id="imgWarning" src = ".//image/pic_normal.png" onclick="ClickWarningImg()">
+            <div  id = "txt_warning" style = "margin-left:30px;position:relative;margin-top:25px;font-size:28px;font-weight: bold;color: rgb(226, 10, 10);" >.............</div> 
+        </div>
+
+        <div class="device-item">
+            <div class="name-device" style="color:darkcyan;margin-bottom:15px ;;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">DOOR</div>
+            <img class="pic"style="width: 280px; height: 310px;" id="imgDoor" src=".//image/pic_door_close.png" onclick="ClickDoorImg()">
+            <button class = "btn" style="margin-left:140px;margin-top:15px" id="btn_door" onclick="ClickDoor()">
+            <div  id = "txt_door" style = "position:relative;bottom:15px;font-size:20px;font-weight: bold;color: rgb(14, 10, 248);" ></div> 
+            </button>
+           
+        </div>
+
+        <div class="device-item">
+            <div class="name-device" style="margin-bottom: 50px;color:rgb(73, 20, 220);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">DOOR WARNING</div>
+            <img class="pic" style="width: 300px; height: 330px;"id="imgDoorWarning" src = ".//image/pic_door_normal.png" onclick="ClickDoorWarningImg()">
+            <div  id = "txt_door_warning" style = "margin-left:55px;position:relative;margin-top:25px;font-size:30px;font-weight: bold;color: rgb(14, 10, 248);" >.............</div> 
+        </div>
+
+       
+    </div>
+
+    <div class="viewgroup-kitchen-sensor">
+        <div class = "item-sensor" style="margin-top:-40px;margin-left: 420px">
+            <div class="name-sensor" style = "position:absolute;font-size:medium;color:rgb(52, 233, 16); font-family: Georgia, 'Times New Roman', Times, serif;">
+                CHANGE DOOR PASSWORD:
+            </div>
+
+        </div>
+
+        <div class="item-sensor">
+            <div id="btn_change_door" onclick="ClickChangeDoorPassword()" class="name-sensor" style = "position:absolute;margin-top:-100px;margin-left:-45px;font-family:Georgia, 'Times New Roman', Times, serif;">
+                📝
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="viewgroup-kitchen-sensor">
+        <div class = "item-sensor" style="margin-top:-50px;margin-left: 440px">
+            <div class="name-sensor" style = "position:absolute;font-size:medium;color:rgb(77, 146, 224); font-family: Georgia, 'Times New Roman', Times, serif;">
+                RESET DOOR PASSWORD:
+            </div>
+
+        </div>
+
+        <div class="item-sensor">
+            <div id="btn_reset_door" onclick="ClickResetDoorPassword()" class="name-sensor" style = "position:absolute;margin-top:-110px;margin-left:-45px;font-family:Georgia, 'Times New Roman', Times, serif;">
+                🔏
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!--<div class="viewgroup-sensor">
+        
+    </div> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Chen lien ket firebase--->
+
+    <!--script type="text/javascript" src="js/index.js"></script -->
+    
+    <script src = 'js/security.js'></script>
+
+    <script type = "module">
+        firebase.auth().onAuthStateChanged(function(user)  {
+        if (!user) {
+                window.location.href="signin.html";
+          }
+        });
+    </script>
+
+            <!--navigate signout button-->
+    
+</body>
+
+</html>
